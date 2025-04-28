@@ -1,0 +1,400 @@
+<!--1-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation</title>
+    <style>
+        /* Desktop version */
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        nav a {
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        /* Mobile version */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+                background-color: #333;
+                padding: 10px 0;
+            }
+
+            nav a {
+                margin: 10px 0;
+                padding: 12px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+</body>
+</html>
+
+<!--2-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Column to Single-Column Layout</title>
+    <style>
+        /* Desktop version */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .content {
+            width: 48%;
+            padding: 20px;
+            background-color: #f4f4f4;
+            margin-bottom: 20px;
+        }
+
+        /* Mobile version */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .content {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="content">Content 1</div>
+        <div class="content">Content 2</div>
+    </div>
+
+</body>
+</html>
+
+<!--3-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resizing Text for Mobile</title>
+    <style>
+        /* Default (desktop) */
+        h1 {
+            font-size: 36px;
+        }
+
+        /* Mobile version */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to My Website</h1>
+
+</body>
+</html>
+
+<!--4-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiding Sidebar on Mobile</title>
+    <style>
+        /* Sidebar is visible on larger screens */
+        .sidebar {
+            width: 300px;
+            float: left;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .main-content {
+            margin-left: 320px;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        /* Mobile version */
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">Sidebar Content</div>
+    <div class="main-content">Main Content</div>
+
+</body>
+</html>
+
+<!--5-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacked Cards Layout</title>
+    <style>
+        /* Desktop version */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            padding: 20px;
+            background-color: #e4e4e4;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        /* Mobile version */
+        @media (max-width: 768px) {
+            .card-container {
+                grid-template-columns: 1fr; /* Stack in a single column */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+    </div>
+
+</body>
+</html>
+
+<!--6-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Background Colors Based on Device</title>
+    <style>
+        /* Desktop version */
+        body {
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        /* Mobile version */
+        @media (max-width: 768px) {
+            body {
+                background-color: lightgreen;
+            }
+
+            h1 {
+                color: darkgreen;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Responsive Background</h1>
+
+</body>
+</html>
+
+<!--7-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout Adjustment</title>
+    <style>
+        /* Desktop version */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .item {
+            width: 30%;
+            padding: 10px;
+            background-color: lightgray;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        /* Mobile version */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .item {
+                width: 80%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+</body>
+</html>
+
+<!--8-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Weight Adjustment</title>
+    <style>
+        /* Default (desktop) */
+        h1 {
+            font-weight: bold;
+        }
+
+        /* Mobile version */
+        @media (max-width: 768px) {
+            h1 {
+                font-weight: normal;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Heading Title</h1>
+
+</body>
+</html>
+
+<!--9-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adjusting Button Size for Touch Devices</title>
+    <style>
+        /* Default (desktop) */
+        button {
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        /* Mobile version */
+        @media (max-width: 768px) {
+            button {
+                padding: 15px 30px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <button>Click Me</button>
+
+</body>
+</html>
+
+<!--10-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing the Layout of Images</title>
+    <style>
+        /* Default (desktop) */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Mobile version */
+        @media (max-width: 768px) {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <img src="image.jpg" alt="Sample Image">
+
+</body>
+</html>
